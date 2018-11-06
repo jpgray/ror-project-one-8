@@ -11,6 +11,7 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.json
   def show
+    @comments = Comment.where(:card_id == @card.id)
   end
 
   # GET /cards/new

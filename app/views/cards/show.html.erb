@@ -22,13 +22,16 @@
 
 <p>
   <strong>User:</strong>
-  <%= @card.user %>
+  <%= @card.user.email %>
 </p>
 
 <p>
   <strong>Duelist:</strong>
-  <%= @card.duelist %>
+  <%= @card.duelist.name %>
 </p>
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
+
+<%= render 'comments/comments' %>
+<%= render 'comments/form' %>

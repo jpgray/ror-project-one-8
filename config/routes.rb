@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :cards do
   resources :comments
-  resources :cards
+  end
   resources :duelists
   devise_for :users
   root to: "duelists#index"
