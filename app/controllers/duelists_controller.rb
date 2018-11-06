@@ -11,6 +11,7 @@ class DuelistsController < ApplicationController
   # GET /duelists/1
   # GET /duelists/1.json
   def show
+    @cards = Card.where(:duelist_id == @duelist.id)
   end
 
   # GET /duelists/new
