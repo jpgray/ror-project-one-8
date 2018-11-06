@@ -1,0 +1,47 @@
+<%= form_with(model: duelist, local: true) do |form| %>
+  <% if duelist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(duelist.errors.count, "error") %> prohibited this duelist from being saved:</h2>
+
+      <ul>
+      <% duelist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.number_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :favourite_card %>
+    <%= form.text_field :favourite_card %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

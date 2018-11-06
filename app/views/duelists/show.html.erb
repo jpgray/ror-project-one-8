@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @duelist.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @duelist.age %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @duelist.rating %>
+</p>
+
+<p>
+  <strong>Favourite card:</strong>
+  <%= @duelist.favourite_card %>
+</p>
+
+<p>
+<img src="<%= @duelist.picture %>">
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @duelist.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_duelist_path(@duelist) %> |
+<%= link_to 'Back', duelists_path %>

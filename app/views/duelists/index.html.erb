@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Duelists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Rating</th>
+      <th>Favourite card</th>
+      <th>Picture</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @duelists.each do |duelist| %>
+      <tr>
+        <td><%= duelist.name %></td>
+        <td><%= duelist.age %></td>
+        <td><%= duelist.rating %>/10</td>
+        <td><%= duelist.favourite_card %></td>
+        <td><img src="<%= duelist.picture %>"></td>
+        <td><%= duelist.user.email %></td>
+        <td><%= link_to 'Show', duelist %></td>
+        <td><%= link_to 'Edit', edit_duelist_path(duelist) %></td>
+        <td><%= link_to 'Destroy', duelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Duelist', new_duelist_path %>

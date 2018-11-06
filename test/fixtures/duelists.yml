@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  age: 1
+  rating: 1
+  favourite_card: MyString
+  picture: MyString
+  user: one
+
+two:
+  name: MyString
+  age: 1
+  rating: 1
+  favourite_card: MyString
+  picture: MyString
+  user: two

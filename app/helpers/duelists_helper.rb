@@ -1,0 +1,2 @@
+module DuelistsHelper
+end
