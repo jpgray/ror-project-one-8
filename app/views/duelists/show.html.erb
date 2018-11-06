@@ -40,10 +40,12 @@
 
   <tbody>
     <% @cards.each do |card| %>
+      <% if @duelist == card.duelist %>
       <tr>
         <td><%= card.name %></td>
         <td><%= link_to 'Show', card %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
