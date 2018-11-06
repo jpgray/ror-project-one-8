@@ -21,7 +21,7 @@
         <td><%= duelist.age %></td>
         <td><%= duelist.rating %>/10</td>
         <td><%= duelist.favourite_card %></td>
-        <td><%= duelist.user.email %></td>
+        <td><%= duelist.user.username %></td>
         <td><%= link_to 'Show', duelist %></td>
         <td><%= link_to 'Edit', edit_duelist_path(duelist) %></td>
         <td><%= link_to 'Destroy', duelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>

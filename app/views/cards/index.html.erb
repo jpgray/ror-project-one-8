@@ -6,9 +6,6 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Atk</th>
-      <th>Def</th>
-      <th>Picture</th>
       <th>User</th>
       <th>Duelist</th>
       <th colspan="3"></th>
@@ -19,7 +16,7 @@
     <% @cards.each do |card| %>
       <tr>
         <td><%= card.name %></td>
-        <td><%= card.user.email %></td>
+        <td><%= card.user.username %></td>
         <td><%= card.duelist.name %></td>
         <td><%= link_to 'Show', card %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
