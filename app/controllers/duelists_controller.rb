@@ -21,6 +21,9 @@ class DuelistsController < ApplicationController
 
   # GET /duelists/1/edit
   def edit
+    if current_user != @duelist.user
+      redirect_to @duelist
+    end
   end
 
   # POST /duelists

@@ -3,7 +3,9 @@
 <% @card.comments.each do |comment| %>
 <div>
   <p><strong><%= comment.title %></strong>: <%= comment.body %> <em> <%= comment.user.username %> </em>
+    <% if current_user == comment.user %>
     <%= link_to '[X]', [comment.card, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </p>
 
 </div>

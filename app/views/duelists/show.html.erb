@@ -50,5 +50,7 @@
   </tbody>
 </table>
 
-<%= link_to 'Edit', edit_duelist_path(@duelist) %> |
+<% if current_user == @duelist.user %>
+<%= link_to 'Edit', edit_duelist_path(@duelist) %>
+<% end %>
 <%= link_to 'Back', duelists_path %>
