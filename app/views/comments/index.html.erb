@@ -20,9 +20,9 @@
         <td><%= comment.body %></td>
         <td><%= comment.user %></td>
         <td><%= comment.card %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to 'Show', comment, :class => "button success radius tiny" %></td>
+        <td><%= button_to 'Edit', edit_comment_path(comment), :class => "button secondary radius tiny" %></td>
+        <td><%= button_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button alert radius tiny" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -21,7 +21,7 @@
 </p>
 
 <p>
-<img src="<%= @duelist.picture %>">
+<img src="<%= @duelist.picture %>" class="duelist-display">
 </p>
 
 <p>
@@ -43,14 +43,15 @@
       <% if @duelist == card.duelist %>
       <tr>
         <td><%= card.name %></td>
-        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Show', card, :class => "button info radius tiny" %></td>
       </tr>
     <% end %>
     <% end %>
   </tbody>
 </table>
-
+<div class="show-action">
 <% if current_user == @duelist.user %>
-<%= link_to 'Edit', edit_duelist_path(@duelist) %>
+<%= link_to 'Edit', edit_duelist_path(@duelist), :class => "button secondary radius tiny" %>
 <% end %>
-<%= link_to 'Back', duelists_path %>
+<%= link_to 'Back', duelists_path, :class => "button secondary radius tiny" %>
+</div>

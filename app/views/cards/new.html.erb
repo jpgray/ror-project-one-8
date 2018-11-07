@@ -1,5 +1,7 @@
+<div class="form-field-div">
 <h1>New Card</h1>
 
 <%= render 'form', card: @card %>
+</div>
 
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Back', cards_path, :class => "button secondary radius tiny" %>

@@ -10,23 +10,23 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+  <div class="small-5 columns">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="small-5 columns">
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
 
-  <div class="field">
+  <div class="small-5">
     <%= form.label :user_id %>
     <%= form.text_field :user_id %>
   </div>
 
-  <div class="field">
+  <div class="small-5">
     <%= form.label :card_id %>
     <%= form.text_field :card_id %>
   </div>
@@ -34,4 +34,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+</div>
 <% end %>

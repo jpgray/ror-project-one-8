@@ -20,5 +20,5 @@
   <%= @comment.card %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= button_to 'Edit', edit_comment_path(@comment), :class => "button secondary radius tiny" %> |
+<%= button_to 'Back', comments_path, :class => "button secondary radius tiny" %>

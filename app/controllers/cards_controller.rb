@@ -12,6 +12,7 @@ class CardsController < ApplicationController
   # GET /cards/1.json
   def show
     @comments = Comment.where(:card_id == @card.id)
+    @user = User.find(current_user.id)
   end
 
   # GET /cards/new

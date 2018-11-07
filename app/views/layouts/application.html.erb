@@ -8,19 +8,27 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <!-- jQuery must be imported before Foundation -->
+    <script src="js/jquery.min.js"></script>
+    <!-- this will include every plugin and utility required by Foundation -->
+    <script src="js/foundation.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="everything">
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.username %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link button tiny radius secondary' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link button tiny radius secondary' %> |
+      <%= link_to 'Duelists Index', duelists_path, :class => 'navbar-link button tiny radius info' %> |
+      <%= link_to 'Cards Index', cards_path, :class => 'navbar-link button tiny radius success' %>
     <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link button tiny radius secondary' %> |
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link button tiny radius secondary' %>
     <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
+    </div>
   </body>
 </html>

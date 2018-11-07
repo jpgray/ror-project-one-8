@@ -15,8 +15,10 @@
   <%= @card.def %>
 </p>
 
-  <img src="<%= @card.picture %>">
-
+<p>
+<img src="<%= @card.picture %>" class="card-display">
+</p>
+<br>
 <p>
   <strong>By User:</strong>
   <%= @card.user.username %>
@@ -25,17 +27,20 @@
 <p>
   <strong>Duelist:</strong>
   <%= @card.duelist.name %>
+  <%= link_to 'Show', @card.duelist, :class => "button info radius tiny" %>
 </p>
-
+<div class="show-action">
 <% if current_user == @card.user %>
-<%= link_to 'Edit', edit_card_path(@card) %>
+<%= button_to 'Edit', edit_card_path(@card), :class => "button secondary radius tiny" %>
 <% end %>
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Back', cards_path, :class => "button secondary radius tiny" %>
+</div>
 
 <%= render 'comments/comments' %>
 
 <h3> Add Comment </h3>
 
+<div class="form_field_div"
 <%= form_for([@card, @card.comments.build]) do |form| %>
 
 <div class="field">
@@ -59,7 +64,10 @@
 </div>
 
 <div class="actions">
-  <%= form.submit({:class => 'btn btn-default'}) %>
+  <%= form.submit({:class => 'button success radius tiny'}) %>
 </div>
 
+<p><span data-tooltip aria-haspopup="true" class="has-tip" title="Yes!">Should I post a comment?</span></p>
+
 <% end %>
+</div>

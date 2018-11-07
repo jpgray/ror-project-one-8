@@ -10,7 +10,9 @@
       <th>Rating</th>
       <th>Favourite card</th>
       <th>User</th>
-      <th colspan="3"></th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -22,9 +24,11 @@
         <td><%= duelist.rating %>/10</td>
         <td><%= duelist.favourite_card %></td>
         <td><%= duelist.user.username %></td>
-        <td><%= link_to 'Show', duelist %></td>
-        <td><%= link_to 'Edit', edit_duelist_path(duelist) %></td>
-        <td><%= link_to 'Destroy', duelist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', duelist, :class => "button info radius tiny" %></td>
+        <% if current_user == duelist.user %>
+        <td><%= link_to 'Edit', edit_duelist_path(duelist), :class => "button secondary radius tiny" %></td>
+        <td><%= link_to 'Destroy', duelist, method: :delete, data: { confirm: 'Are you sure?' }, :class => "button alert radius tiny" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Duelist', new_duelist_path %>
+<%= link_to 'New Duelist', new_duelist_path, :class => "button success radius tiny" %>

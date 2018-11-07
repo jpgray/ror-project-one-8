@@ -1,6 +1,8 @@
 <h1>Editing Duelist</h1>
 
+<div class="form-field-div">
 <%= render 'form', duelist: @duelist %>
+</div>
 
-<%= link_to 'Show', @duelist %> |
-<%= link_to 'Back', duelists_path %>
+<%= link_to 'Show', @duelist, :class => "button info radius tiny" %> |
+<%= link_to 'Back', duelists_path, :class => "button secondary radius tiny" %>
