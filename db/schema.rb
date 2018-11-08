@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2018_11_06_161644) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cards", force: :cascade do |t|
     t.string "name"
     t.integer "atk"
     t.integer "def"
     t.string "picture"
-    t.integer "user_id"
-    t.integer "duelist_id"
+    t.bigint "user_id"
+    t.bigint "duelist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["duelist_id"], name: "index_cards_on_duelist_id"
@@ -28,8 +31,8 @@ ActiveRecord::Schema.define(version: 2018_11_06_161644) do
   create_table "comments", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.integer "user_id"
-    t.integer "card_id"
+    t.bigint "user_id"
+    t.bigint "card_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["card_id"], name: "index_comments_on_card_id"
@@ -42,7 +45,7 @@ ActiveRecord::Schema.define(version: 2018_11_06_161644) do
     t.integer "rating"
     t.string "favourite_card"
     t.string "picture"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_duelists_on_user_id"
