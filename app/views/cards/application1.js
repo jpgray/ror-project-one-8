@@ -16,17 +16,15 @@
 //= require_tree .
 
 // $(function(){ $(document).foundation(); });
-//
+
 const thumbs = document.getElementById("thumbs_Up");
 const unhideSomething = (SOMETHING) => SOMETHING.style.visibility="visible";
 const hideSomething = (SOMETHING) => SOMETHING.style.visibility="hidden";
 const hideThumbs = () => hideSomething(thumbs);
 const hideThumbsTimer = (TIMEOUT) => setTimeout(hideThumbs, TIMEOUT);
 const thumbsUp = () => {
-  unhideSomething(thumbs);
-  thumbs.src="https://media1.tenor.com/images/9e44ac46aa2e28be154810be63f661a7/tenor.gif?itemid=7815642";
-  hideThumbsTimer(1200);
+unhideSomething(thumbs);
+hideThumbsTimer(50000);
 }
-//
-const clickHelp = document.getElementById("has-tip")
-clickHelp.addEventListener("click", thumbsUp);
+
+document.getElementsByClassName("has-tip").addEventListener("click", thumbsUp)[0];

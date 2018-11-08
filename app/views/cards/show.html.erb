@@ -40,7 +40,7 @@
 
 <h3> Add Comment </h3>
 
-<div class="form_field_div"
+<!-- <div class="form_field_div"> -->
 <%= form_for([@card, @card.comments.build]) do |form| %>
 
 <div class="field">
@@ -65,9 +65,10 @@
 
 <div class="actions">
   <%= form.submit({:class => 'button success radius tiny'}) %>
+
 </div>
-
-<p><span data-tooltip aria-haspopup="true" class="has-tip" title="Yes!">Should I post a comment?</span></p>
-
 <% end %>
-</div>
+
+<p><span data-tooltip aria-haspopup="true" class="has-tip" id="has-tip" title="Yes!">Should I post a comment?</span></p>
+
+<!-- </div> -->

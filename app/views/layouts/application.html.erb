@@ -8,10 +8,15 @@
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <!-- <link rel="" href="/css/master.css"> -->
+    <script src="application.js"></script>
+    <!-- <script src="application.js"></script>
+
     <!-- jQuery must be imported before Foundation -->
-    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/jquery.min.js"></script> -->
     <!-- this will include every plugin and utility required by Foundation -->
-    <script src="js/foundation.min.js"></script>
+    <!-- <script src="js/foundation.min.js"></script> -->
     <%= csrf_meta_tags %>
   </head>
 
@@ -27,6 +32,8 @@
       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link button tiny radius secondary' %> |
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link button tiny radius secondary' %>
     <% end %>
+    <img src ="https://media1.tenor.com/images/9e44ac46aa2e28be154810be63f661a7/tenor.gif?itemid=7815642", id ="thumbs_Up">
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
     </div>

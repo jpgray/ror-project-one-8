@@ -32,13 +32,26 @@ body {
   background-color: rgba(251, 158, 131, 0);
 }
 
-p, h3 {
+p, h3, h2 {
   text-align: center;
   color: rgb(135, 226, 173);
 }
 
-h1, label {
+h1, label, .has-tip {
   color: rgb(135, 226, 173);
+}
+
+#thumbs_Up {
+  position: fixed;
+  visibility: hidden;
+  margin-top: 14%;
+  // margin-right: 300px;
+
+
+  // padding-right: 500px;
+  float: left;
+  z-index: 6;
+
 }
 
 p, ol, ul, td {
@@ -101,7 +114,7 @@ div {
 }
 
 #notice {
-  color: green;
+  color: rgb(218, 235, 7);
 }
 
 .field_with_errors {
