@@ -17,6 +17,8 @@
 
 // $(function(){ $(document).foundation(); });
 //
+
+if (typeof thumbs == "undefined") {
 const thumbs = document.getElementById("thumbs_Up");
 const unhideSomething = (SOMETHING) => SOMETHING.style.visibility="visible";
 const hideSomething = (SOMETHING) => SOMETHING.style.visibility="hidden";
@@ -30,3 +32,4 @@ const thumbsUp = () => {
 //
 const clickHelp = document.getElementById("has-tip")
 clickHelp.addEventListener("click", thumbsUp);
+}
