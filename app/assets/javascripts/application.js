@@ -14,7 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
+Uglifier.new(:harmony => true)
 // $(function(){ $(document).foundation(); });
 //
 
