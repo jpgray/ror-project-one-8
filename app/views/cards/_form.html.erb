@@ -36,9 +36,9 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :duelist_id, :value => @card.duelist_id %>
+    <%= form.label :duelist_id %>
+    <%= form.text_field :duelist_id, :value => @card.duelist.id %>
   </div>
-
   <div class="actions">
     <%= form.submit({:class => 'button success radius tiny'}) %>
   </div>
